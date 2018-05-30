@@ -155,8 +155,9 @@ TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(VENDOR_PATH)/compatibility_matrix.xml
 
-# exFat
-TARGET_EXFAT_DRIVER := exfat
+# sdFat
+TARGET_EXFAT_DRIVER := sdfat
+TARGET_VFAT_DRIVER := sdfat
 
 # FM
 BOARD_HAVE_QCOM_FM := true
