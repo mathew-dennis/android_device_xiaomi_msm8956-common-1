@@ -167,10 +167,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
 
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # Face detection extension
 PRODUCT_PACKAGES += \
     org.codeaurora.camera
