@@ -42,7 +42,9 @@ import com.lineageos.settings.kenzopref.R;
 public class KenzoPrefSettings extends PreferenceActivity implements OnPreferenceChangeListener {
 	private static final boolean DEBUG = false;
 	private static final String TAG = "KenzoPref";
+	private SwitchPreference mVolteFix;
 
+		private static final String SYSTEM_PROPERTY_VOLTE_FIX = "persist.volte.fix";
         private Preference mKcalPref;
 
     private Context mContext;
@@ -62,6 +64,12 @@ public class KenzoPrefSettings extends PreferenceActivity implements OnPreferenc
                      }
                 });
         mContext = getApplicationContext();
+		
+        mVolteFix = (SwitchPreference) findPreference(SYSTEM_PROPERTY_VOLTE_FIX);
+        if( mVolteFix != null ) {
+            mVolteFix.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_VOLTE_FIX, false));
+            mVolteFix.setOnPreferenceChangeListener(this);
+        }
 }
 
     private void setEnable(String key, boolean value) {

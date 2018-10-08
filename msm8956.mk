@@ -327,7 +327,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.volte.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
