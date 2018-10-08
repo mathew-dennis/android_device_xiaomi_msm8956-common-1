@@ -321,14 +321,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.sh \
-    init.qcom.post_boot.sh
+    init.qcom.post_boot.sh \
+    init.volte.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
-    ueventd.qcom.rc \
-    init.volte.sh
+    ueventd.qcom.rc 
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
