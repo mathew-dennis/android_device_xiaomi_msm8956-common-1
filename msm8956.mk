@@ -212,7 +212,8 @@ PRODUCT_PACKAGES += \
     libloc_ds_api \
     libloc_stub \
     liblocation_api \
-    libvehiclenetwork-native
+    libvehiclenetwork-native \
+    libsensorndkbridge
 
 PRODUCT_PACKAGES += \
     flp.conf \
@@ -335,10 +336,10 @@ PRODUCT_PACKAGES += \
 
 # RIL
 #PRODUCT_PACKAGES += \
-#    telephony-ext
+    telephony-ext
 
 #PRODUCT_BOOT_JARS += \
-#    telephony-ext
+    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
