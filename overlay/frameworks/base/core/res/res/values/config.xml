@@ -493,4 +493,7 @@
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
     <bool name="config_proximityCheckOnWake">true</bool>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
+    <!-- Whether the device has fingeprint sensor or not -->
+    <bool name="config_hasFingerprintSensor">true</bool>
 </resources>
