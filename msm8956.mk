@@ -119,6 +119,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth@1.0-impl \
     libbt-vendor
 
 # Camera
@@ -220,7 +221,8 @@ PRODUCT_PACKAGES += \
     izat.conf \
     lowi.conf \
     sap.conf \
-    xtwifi.conf
+    xtwifi.conf\
+    hals.conf
 
 # Health HAL
 PRODUCT_PACKAGES += \
@@ -238,8 +240,12 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
+# device manifest
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
+DEVICE_MANIFEST_FILE += \
+    $(LOCAL_PATH)/manifest.xml
 
 # IPA Manager
 PRODUCT_PACKAGES += \
@@ -307,10 +313,12 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service-qti
+    android.hardware.power@1.0-service-qti \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service 
 
 # QPerformance
-PRODUCT_BOOT_JARS += QPerformance
+#PRODUCT_BOOT_JARS += QPerformance
 
 # Qualcomm dependencies
 PRODUCT_PACKAGES += \
@@ -383,8 +391,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -408,12 +414,7 @@ PRODUCT_PACKAGES += \
     libcld80211 \
     libqsap_sdk \
     libQWiFiSoftApCfg \
-    libwpa_client \
-    wificond \
-    hostapd \
-    wificond \
-    wpa_supplicant \
-    wpa_supplicant.conf
+    libwpa_client 
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
